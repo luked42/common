@@ -14,11 +14,11 @@ public:
 
 	virtual ~StrongType() = default;
 
-	const T& Get() const { return mValue; }
-
 	StrongType(const StrongType&) = default;
 	StrongType(StrongType&&) = default;
 	StrongType& operator=(StrongType&) = default;
+
+	const T& Get() const { return mValue; }
 
 	bool operator==(const StrongType& other) const { return mValue == other.mValue; }
 	bool operator!=(const StrongType& other) const { return !(*this == other); }
