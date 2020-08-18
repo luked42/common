@@ -16,7 +16,7 @@ public:
 
 	StrongType(const StrongType&) = default;
 	StrongType(StrongType&&) = default;
-	StrongType& operator=(StrongType&) = default;
+	StrongType& operator=(const StrongType&) = default;
 
 	const T& Get() const { return mValue; }
 
